@@ -37,5 +37,6 @@ public class ReservationModel {
     private ClientModel client;
 
     @OneToOne(cascade = CascadeType.MERGE, mappedBy = "reservation")
+    @JoinColumn(name = "id_score",referencedColumnName = "id_score", unique = true)
     private ScoreModel score;
 }
